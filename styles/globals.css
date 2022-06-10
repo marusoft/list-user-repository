@@ -72,5 +72,31 @@ a {
 
 /* search container */
 .searchContainer{
-  
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.searchHeader{
+  background-color: blue;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+}
+input{
+  padding: 8px;
+  width: 300px;
+}
+.btnSearch{
+  padding: 8px;
+  border: none;
+  width: 120px;
+  margin-left: 8px;
+  cursor: pointer;
+  color: #333;
+  font-size: 18px;
+  letter-spacing: 3px;
 }

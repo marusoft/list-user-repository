@@ -1,13 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const Card = () => {
+const Card = ({ repos }) => {
+  console.log(repos);
+  const repolists =
+    repos.length !== 0 ? (
+      repos.data.slice(0, 15).map((repo) => <li key={repo.id}>{repo.name}</li>)
+    ) : (
+      <li>No Repos found</li>
+    );
   return (
     <div>
-      <h3>repo name</h3>
-      <p>imag</p>
-      <p>Description</p>
+      <ul>{repolists}</ul>
     </div>
-  )
-}
+  );
+};
 
 export default Card;
