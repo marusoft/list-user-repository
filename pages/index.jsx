@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { signIn, signOut, useSession } from "next-auth/react";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   const { data: session, status } = useSession();
@@ -8,6 +9,7 @@ const Home = () => {
   // console.log("USER", user)
   return (
     <div>
+      <Navbar  user={user} />
       {user && (
         <>
           <h3>{user?.user.name}</h3>
