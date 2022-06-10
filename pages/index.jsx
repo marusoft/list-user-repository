@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useSession } from "next-auth/react";
+import Description from "../components/Description";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
   return (
     <div>
       <Navbar user={user} />
+      <Description />
     </div>
   );
 };

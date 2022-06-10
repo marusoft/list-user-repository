@@ -1,13 +1,20 @@
 import { getSession } from "next-auth/react";
+import Card from "../components/Card";
+import Search from "../components/Search";
 
-const Dashboard = ({session}) => {
+const RepoList = ({session}) => {
   const user = session?.user
   return (
-    <div>Only authenticated users are allow</div>
+    <div style={{
+      padding: "30px"
+    }}>
+      <Search />
+      <Card />
+    </div>
   )
 }
 
-export default Dashboard;
+export default RepoList;
 
 export async function getServerSideProps(context){
   const session = await getSession(context);

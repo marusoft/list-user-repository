@@ -56,3 +56,21 @@ a {
   width: 70px;
   font-weight: bold;
 }
+.description{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 80px 100px;
+  width: 100%;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #111111;
+  font-weight: 300;
+}
+
+/* search container */
+.searchContainer{
+  
+}
