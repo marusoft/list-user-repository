@@ -18,7 +18,7 @@ export async function getServerSideProps(context) {
   if (!session) {
     return {
       redirect: {
-        destination: "/",
+        destination: "/http://localhost:3000/api/auth/callback/github",
         permanent: false,
       },
     };
