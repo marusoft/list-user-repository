@@ -23,7 +23,7 @@ const Navbar = ({ user }) => {
           </li>
         </ul>
       ) : (
-        <button className="logout" onClick={() => signIn("github")}>Login with Github</button>
+        <button className="login" onClick={() => signIn("github")}>Login with Github</button>
       )}
     </div>
   );
