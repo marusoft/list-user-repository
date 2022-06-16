@@ -4,7 +4,9 @@ const Card = ({ repos }) => {
   console.log(repos);
   const repolists =
     repos.length !== 0 ? (
-      repos.data.slice(0, 15).map((repo) => <li key={repo.id}>{repo.name}</li>)
+      repos.data.slice(0, 15).map((repo) => <li key={repo.id}>
+        <a href={repo.html_url}>{repo.name}</a>
+      </li>)
     ) : (
       <li>No Repos found</li>
     );

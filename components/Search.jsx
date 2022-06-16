@@ -1,18 +1,21 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
 import axios from "axios";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import Link from "next/link";
+import CardDetails from "./CardDetails";
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState("");
   const [repos, setRepos] = useState([]);
+  console.log("data", repos)
 
   const handleChange = (e) => {
     setSearchInput(e.target.value);
   };
+
   const handleClick = async () => {
-    console.log(searchInput);
+    // console.log(searchInput);
 
     try {
       const data = await axios.get(
@@ -30,6 +33,9 @@ const Search = () => {
         <Link href="/" passHref>
           Repolist
         </Link>
+        <span>
+          <Link href="/repo-details">RepoDetails</Link>
+        </span>
       </header>
       <div className="searchContainer">
         <input
@@ -42,6 +48,7 @@ const Search = () => {
         <button className="btnSearch" onClick={handleClick}>Search</button>
       </div>
       <Card repos={repos} />
+      <CardDetails repos={repos} />
     </>
   );
 };
